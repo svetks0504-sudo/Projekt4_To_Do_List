@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.togeser1Ekran {
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+}
+.time {
+  width: 90%;
+  height: auto;
+}
+.time h2 {
+  font-size: 1.5rem;
+}
+.time h2 {
+  font-size: 1.2rem;
+}
+.smalDisplay {
+  height: 0;
+  width: 0;
+}
+.serch {
+  width: 90%;
+  border: none;
+  background-color: rgba(73, 69, 79, 1);
+  border-radius: 20px;
+  opacity: 0.2;
+}
+#serchInput {
+  width: 80%;
+  border: none;
+  background-color: rgba(73, 69, 79, 1);
+}

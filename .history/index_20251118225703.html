@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do-List</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/styles/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!--############1Ekran###############-->
+    <div class="togeser1Ekran">
+      <div class="time">
+        <h2 id="dayForWeeks"></h2>
+        <p id="dayAndTime"></p>
+      </div>
+      <form class="serch">
+        <input type="text" id="serchInput" name="text" placeholder="Поиск" />
+        <button class="serchButton">
+          <span class="material-symbols-outlined"> search </span>
+        </button>
+      </form>
+      <div class="filtr">
+        <button class="all">
+          <span class="material-symbols-outlined" id="check"> check </span>
+          Все
+        </button>
+        <button class="aktiv">
+          <span class="material-symbols-outlined" id="check1"> check </span>
+          Активные
+        </button>
+        <button class="end">
+          <span class="material-symbols-outlined" id="check2"> check </span>
+          Завершенные
+        </button>
+
+        <div class="toWork">
+          <div class="toTheTaskItself">
+<button class="checkForTask">
+   <span class="material-symbols-outlined" id="check3"> check </span>
+   </button>
+   <p class="dataForTask"></p>
+   <p class="theTask"></p>
+          </div>
+      </div>
+      <div class="pensilDiv">
+      <span class="material-symbols-outlined"> edit </span>
+      </div>
+    </div>
+
+    <!--############2Ekran###############-->
+
+    <div class="smalDisplay">
+      <form class="creatWork">
+        <input type="text" id="needToWork" name="text" placeholder="Описание" />
+        <input type="date" id="needDate" name="date" placeholder="Дата" />
+      </form>
+      <div class="remember">
+        <p>Напомнить мне</p>
+        <img src="" alt="button" />
+      </div>
+      <div class="funktional">
+        <button class="add">Добавить</button>
+        <button class="delete">Отмена</button>
+      </div>
+    </div>
+  </body>
+  <script src="/scripts/script.js"></script>
+</html>

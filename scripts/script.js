@@ -16,6 +16,7 @@
     completed: false,
   },
 ];*/
+const overlay = document.querySelector(".overlay");
 const dayForWeeks = document.querySelector("#dayForWeeks");
 const dayAndTime = document.querySelector("#dayAndTime");
 const all = document.querySelector(".all");
@@ -24,6 +25,11 @@ const end = document.querySelector(".end");
 const check = document.querySelector("#check");
 const check1 = document.querySelector("#check1");
 const check2 = document.querySelector("#check2");
+const check3 = document.querySelector("#check3");
+const checkForTask = document.querySelector(".checkForTask");
+const pensilButton = document.querySelector(".pensilButton");
+const smalDisplay = document.querySelector(".smalDisplay");
+const deleteBtn = document.querySelector(".deleteBtn");
 
 //выводим день и дату
 const today = new Date();
@@ -71,3 +77,22 @@ const putCheckMark = (element, ikonca) => {
 putCheckMark(all, check);
 putCheckMark(aktiv, check1);
 putCheckMark(end, check2);
+
+//при нажатии кнопки появляется или прячеться галочка p
+
+//при нажатии кнопки появляется 2 екран и прячеться кнопка и наоборот при отмене
+
+const clickChenchEkran = (openBtn, closeBtn) => {
+  openBtn.addEventListener("click", () => {
+    smalDisplay.classList.add("active");
+    openBtn.classList.add("active");
+    overlay.classList.add("active");
+  });
+  closeBtn.addEventListener("click", () => {
+    smalDisplay.classList.remove("active");
+    openBtn.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+};
+
+clickChenchEkran(pensilButton, deleteBtn);

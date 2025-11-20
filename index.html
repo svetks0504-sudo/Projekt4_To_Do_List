@@ -18,6 +18,7 @@
   </head>
   <body>
     <!--############1Ekran###############-->
+    <div class="overlay"></div>
     <div class="togeser1Ekran">
       <div class="time">
         <h2 id="dayForWeeks"></h2>
@@ -49,8 +50,8 @@
             <span class="material-symbols-outlined" id="check3"> check </span>
           </button>
           <div class="textForWork">
-            <input type="text" name="text" class="dataForTask" placeholder="Определимся с датой"> </input>
-            <input type="text" name="text" class="theTask" placeholder="Давай создадим первое задание"></input>
+            <p class="dataForTask"></p>
+            <p class="theTask"></p>
           </div>
         </div>
       </div>
@@ -62,17 +63,18 @@
     <!--############2Ekran###############-->
 
     <div class="smalDisplay">
+      <div class="linie"></div>
       <form class="creatWork">
         <input type="text" id="needToWork" name="text" placeholder="Описание" />
         <input type="date" id="needDate" name="date" placeholder="Дата" />
       </form>
       <div class="remember">
         <p>Напомнить мне</p>
-        <img src="" alt="button" />
+        <img src="/styles/images/Switch.svg" alt="button" />
       </div>
       <div class="funktional">
-        <button class="add">Добавить</button>
-        <button class="delete">Отмена</button>
+        <button class="addBtn">Добавить</button>
+        <button class="deleteBtn">Отмена</button>
       </div>
     </div>
   </body>

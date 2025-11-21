@@ -44,6 +44,7 @@
           Завершенные
         </button>
       </div>
+
       <div class="toWork">
         <div class="toTheTaskItself">
           <button class="checkForTask">
@@ -53,11 +54,16 @@
             <p class="dataForTask"></p>
             <p class="theTask"></p>
           </div>
+           <button class="deleteTask"> 
+              <span class="material-symbols-outlined" id="dump"> delete </span>
+            </button>
         </div>
       </div>
+
       <button class="pensilButton">
         <span class="material-symbols-outlined" id="pencil"> edit </span>
       </button>
+
     </div>
 
     <!--############2Ekran###############-->
@@ -67,14 +73,14 @@
       <form class="creatWork">
         <input type="text" id="needToWork" name="text" placeholder="Описание" />
         <input type="date" id="needDate" name="date" placeholder="Дата" />
-      </form>
-      <div class="remember">
+         <div class="remember">
         <p>Напомнить мне</p>
         <img src="/styles/images/Switch.svg" alt="button" />
       </div>
       <div class="funktional">
+        <p class="message"></p>
         <button class="addBtn">Добавить</button>
-        <button class="deleteBtn">Отмена</button>
+        <button class="deleteBtn" type="button">Отмена</button>
       </div>
     </div>
   </body>

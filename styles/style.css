@@ -136,41 +136,17 @@ body {
   width: 90%;
   background-color: rgba(103, 80, 164, 0.051);
   border-radius: 20px;
-  padding: 2vw;
+  padding: 3vw;
   display: flex;
   align-items: center;
   align-items: center;
-  gap: 2vw;
-}
-.checkForTask {
-  height: 3vw;
-  width: 3vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#check3 {
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-}
-.checkForTask:hover {
-  background-color: rgba(232, 222, 248, 1);
-  border-color: rgba(56, 30, 114, 1);
-  transition: 0.2s;
-}
-.checkForTask:active {
-  background-color: rgb(224, 207, 252);
-  transition: 0.2s;
-}
-.checkForTask.active {
-  background-color: rgb(224, 207, 252);
+  gap: 4vw;
 }
 .textForWork {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 1.5vw;
+  gap: 5px;
   width: 90%;
 }
 .textForWork p {
@@ -178,7 +154,54 @@ body {
   border: none;
   width: 100%;
   font-size: 1rem;
+  font-family: "Inter", sans-serif;
 }
+.checkForTask {
+  height: 3.5vw;
+  width: 3.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+#check3 {
+  font-size: 3.5vw;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkForTask:hover {
+  background-color: rgb(207, 187, 238);
+  border-color: rgba(56, 30, 114, 1);
+  transition: 0.2s;
+}
+.checkForTask:active {
+  background-color: rgb(139, 93, 214);
+  transition: 0.2s;
+}
+.checkForTask.active {
+  background-color: rgb(207, 187, 238);
+}
+
+.deleteTask {
+  border: none;
+  width: 3vw;
+  height: 3vw;
+  background-color: rgba(103, 80, 164, 0);
+}
+#dump {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deleteTask:hover {
+  background-color: rgb(222, 214, 235);
+  border-radius: 5px;
+  width: 5vw;
+  height: 5vw;
+}
+
 .pensilButton {
   all: unset;
   background-color: rgba(235, 222, 247, 1);
@@ -195,6 +218,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: fixed;
 }
 .pensilButton:hover {
   background-color: rgb(214, 200, 238);
@@ -226,12 +250,13 @@ body {
   border-top-right-radius: 15px;
   font-family: "Inter", sans-serif;
 }
+
 .linie {
-  height: 0.8vw;
+  height: 0.5vw;
   width: 8vw;
   border-radius: 30px;
   background-color: rgba(121, 116, 126, 1);
-  margin: 3vw 0 5vw 0;
+  margin: 4vw 0 6vw 0;
 }
 .creatWork {
   width: 100%;
@@ -239,7 +264,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2.5vw;
+  gap: 3vw;
   margin: 1, 5vw;
 }
 #needToWork,
@@ -247,8 +272,8 @@ body {
   width: 90%;
   border: 1px solid rgba(73, 69, 79, 1);
   border-radius: 5px;
-  font-size: 3vw;
-  padding: 2vw;
+  font-size: 4vw;
+  padding: 3vw;
   color: rgba(73, 69, 79, 1);
 }
 .remember {
@@ -256,7 +281,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  font-size: 2.8vw;
+  font-size: 4vw;
   padding: 1vw;
   color: rgba(73, 69, 79, 1);
   margin: 2vw;
@@ -271,32 +296,64 @@ body {
   width: 90%;
   margin: 5vw 0 3vw 0;
 }
-
+.message {
+  font-size: 2.5vw;
+  width: 50%;
+  padding-top: 1vw;
+  color: rgba(103, 80, 164, 1);
+}
 .addBtn,
 .deleteBtn {
-  width: 20vw;
+  width: 22%;
   height: auto;
   padding: 2vw 3vw;
   border-radius: 30px;
   background-color: white;
   border: 1px solid rgba(73, 69, 79, 1);
-  font-size: 2.5vw;
+  font-size: 3vw;
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgba(103, 80, 164, 1);
 }
 
-.addBtn:hover {
+.addBtn:hover,
+.deleteBtn:hover {
   background-color: rgb(135, 113, 194);
   color: white;
   transition: 0.2s;
 }
-.addBtn:active {
+.addBtn:active,
+.deleteBtn:active {
   background-color: rgba(103, 80, 164, 1);
   transition: 0.2s;
   color: white;
 }
 .deleteBtn.active {
   display: none;
+}
+@media (min-width: 1200px) {
+  .smalDisplay.active {
+    max-height: 60%;
+  }
+  #needToWork,
+  #needDate {
+    font-size: 1.5vw;
+    padding: 1vw;
+  }
+  .remember {
+    font-size: 1.5vw;
+    margin: 1vw;
+  }
+  .remember img {
+    height: 3vw;
+  }
+  .addBtn,
+  .deleteBtn {
+    padding: 0.5vw 1vw;
+  }
+  .funktional {
+    gap: 1vw;
+    margin: 1vw;
+  }
 }
